@@ -6,10 +6,10 @@
 
     - name: Provision a set of instances
       ec2:
-         region: cn-north-1
+         ec2_url: https://ec2.cn-northwest-1.amazonaws.com.cn
          key_name: guolianc
          instance_type: t2.micro
-         image: "ami-4f508c22"
+         image: "ami-a1ccd8c3"
          wait: true
          exact_count: 1
          count_tag:
