@@ -11,7 +11,7 @@
          instance_type: t2.micro
          image: "ami-4f508c22"
          wait: true
-         exact_count: 1
+         exact_count: 2
          count_tag:
             Name: cloud-ec2
          instance_tags:
