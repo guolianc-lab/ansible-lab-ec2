@@ -1,0 +1,18 @@
+- hosts: localhost
+  connection: local
+  gather_facts: False
+
+  tasks:
+
+    - name: Provision a set of instances
+      ec2:
+         key_name: guolianc
+         instance_type: t2.micro
+         image: "ami-4f508c22"
+         wait: true
+         exact_count: 1
+         count_tag:
+            Name: cloud-ec2
+         instance_tags:
+            Name: cloud-ec2
+      register: ec2
